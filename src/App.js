@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+// import ReactDOM from 'react-dom/client';
+import './index.css';
+import ContentRouter from "./components/content_router";
 
-function App() {
+// const user = {
+//   name: 'Hedy Lamarr',
+//   imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
+//   imageSize: 90,
+// };
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-screen h-screen bg-gray-200 dark:bg-gray-700">
+      <h1> hi </h1>
+      <ContentRouter />
     </div>
+    
   );
 }
 
-export default App;
