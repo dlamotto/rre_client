@@ -1,7 +1,8 @@
 import React from 'react';
 // import ReactDOM from 'react-dom/client';
-import './index.css';
+//import './index.css';
 import ContentRouter from "./components/content_router";
+import Dashboard from './pages/dashboard';
 
 // const user = {
 //   name: 'Hedy Lamarr',
@@ -11,9 +12,10 @@ import ContentRouter from "./components/content_router";
 
 export const App = () => {
   return (
-    <div className="w-screen h-screen bg-gray-200 dark:bg-gray-700">
+    <div >
       <h1> hi </h1>
-      <ContentRouter />
+      <Dashboard />
+      {/* <ContentRouter /> */}
     </div>
     
   );
