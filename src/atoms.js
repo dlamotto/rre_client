@@ -3,6 +3,8 @@ import { recoilPersist } from 'recoil-persist'
 //import { useRecoilState } from "recoil";
 //const { persistAtom } = recoilPersist()
 
+// TODO: figure out how to use these atoms to update states
+
 /** Page state atom - specifies the current page to route to
  */
 export const pageState = atom({
@@ -13,9 +15,9 @@ export const pageState = atom({
 
 export const optionsState = atom({
     key: 'optionsState',
-    default: [
-      { id: 1, label: 'Option 1', selected: false },
-      { id: 2, label: 'Option 2', selected: false },
-      { id: 3, label: 'Option 3', selected: false }
-    ]
+    default: (props) =>
+    props.options.map((option) => ({
+      ...option,
+      selected: false
+    }))
   });
